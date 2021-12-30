@@ -1,10 +1,10 @@
 # Button 按钮
 
-<d-button></d-button>
+<m-button></m-button>
 
 ```vue
 <template>
-  <d-button>按钮</d-button>
+  <m-button>按钮</m-button>
 </template>
 ```
 

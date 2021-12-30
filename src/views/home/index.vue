@@ -8,7 +8,7 @@
     +
     <a href="https://marketplace.visualstudio.com/items?itemName=znck.vue-language-features-insiders" target="_blank"> Vue LaVue Language Features (Insiders) </a>
   </p>
-  <d-button>测试按钮组件</d-button>
+  <m-button>测试按钮组件</m-button>
 </template>
 
 <script setup lang="ts">

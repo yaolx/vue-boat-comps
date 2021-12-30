@@ -1,11 +1,11 @@
 import Theme from 'vitepress/dist/client/theme-default'
 import { Button } from '../../../packages/Button'
-import { Foo } from '../../../packages/Foo'
+import { Dialog } from '../../../packages/Dialog'
 
 export default {
   ...Theme,
   enhanceApp({ app }) {
-    app.component('d-button', Button)
-    app.component('d-dialog', Foo)
+    app.component('m-button', Button)
+    app.component('m-dialog', Dialog)
   }
 }
