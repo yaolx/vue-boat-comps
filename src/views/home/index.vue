@@ -8,20 +8,30 @@
     +
     <a href="https://marketplace.visualstudio.com/items?itemName=znck.vue-language-features-insiders" target="_blank"> Vue LaVue Language Features (Insiders) </a>
   </p>
-  <m-button>测试按钮组件</m-button>
+  <m-button @click="onHandler">
+    测试按钮组件
+  </m-button>
+  <div v-if="user.name">
+    姓名：{{ user?.name }} 年龄：{{ user?.age }}
+  </div>
 </template>
 
 <script setup lang="ts">
 import request from '@/config/request'
 import { ref, defineComponent } from 'vue'
-
+interface User {
+  name?: string
+  age?: number
+  mobile?: number
+}
 defineProps({
   msg: {
     default: '学vue3的走起',
     type: String,
-    required: true
+    required: false
   }
 })
+const user = ref<User>({})
 const onHandler = () => {
   request(
     {
@@ -31,8 +41,9 @@ const onHandler = () => {
     {
       loading: true
     }
-  ).then((data) => {
-    console.log('EEEE', data)
+  ).then(({ data }) => {
+    user.value = data
+    console.log('user', user.value)
   })
 }
 defineComponent({

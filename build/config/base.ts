@@ -63,5 +63,5 @@ export function genConfig(mode, isBuild) {
 export default ({ command, mode }: ConfigEnv) => {
   const isBuild = command === 'build'
   envInit(mode)
-  return genConfig(command, isBuild)
+  return genConfig(mode, isBuild)
 }

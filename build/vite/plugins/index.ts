@@ -24,7 +24,7 @@ export function createVitePlugins(viteEnv: string, isBuild: boolean) {
     // es检测
     {
       ...eslint({
-        include: 'src/**/*.+(js|jsx|ts|tsx|vue)'
+        include: 'src/**/*.+(js|jsx|vue)'
       }),
       enforce: 'pre'
     },

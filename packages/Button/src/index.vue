@@ -1,5 +1,7 @@
 <template>
-  <button class="my-button" @click="$emit('click', $event)">1111</button>
+  <div class="my-button" @click="$emit('click', $event)">
+    <slot />
+  </div>
 </template>
 
 <script lang="ts" setup>
@@ -8,12 +10,13 @@ defineEmits(['click'])
 
 <style scoped lang="less">
 .my-button {
-  appearance: none;
+  display: inline-block;
   padding: 5px 10px;
   background: lightskyblue;
   border: none;
   border-radius: 4px;
   color: #fff;
+  cursor: pointer;
   &:active {
     background: rgb(92, 185, 243);
   }

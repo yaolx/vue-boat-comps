@@ -4,9 +4,9 @@
   "scripts": {
     "dev": "vite -m test --config ./build/config/base.ts",
     "serve": "vite preview",
-    "start:mock": "vite -m mock",
-    "start:test": "vite -m test",
-    "start:production": "vite -m production",
+    "start:mock": "vite -m mock --config ./build/config/base.ts",
+    "start:test": "vite -m test --config ./build/config/base.ts",
+    "start:production": "vite -m production --config ./build/config/base.ts",
     "build": "vuedx-typecheck . && vite build",
     "build:test": "vue-tsc --noEmit && vite build -m test",
     "build:production": "vue-tsc --noEmit && vite build -m production",
